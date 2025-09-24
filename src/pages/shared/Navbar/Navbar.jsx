@@ -32,8 +32,8 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end w-[100px]">
-                <div className="dropdown dropdown-end">
+            <div className="navbar-end mr-4 md:w-[100px]">
+                <div className="dropdown dropdown-end bg-cyan-700 rounded-field">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
                             {/* {

@@ -1,8 +1,9 @@
+import Carousel from "../Banner/Carousel";
 
 const Home = () => {
     return (
         <div>
-                home page
+            <Carousel></Carousel>
         </div>
     );
 };
