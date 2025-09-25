@@ -11,27 +11,27 @@ const Carousel = () => {
     const bannerData = [
         {
             title: "Find Trusted Services Near You – যেকোনো সময়, যেকোনো দরজায়।",
-            imageUrl: "https://i.postimg.cc/T1MPz1bs/local-service-1.jpg",
+            imageUrl: 'https://i.postimg.cc/nr0xHrtj/pexels-marty-shih-2147889088-31893699.jpg',
             buttonText: ["Browse Services", "Set Location"]
         },
         {
             title: "From electricians to beauticians – সব সলিউশন এক প্ল্যাটফর্মে!",
-            imageUrl: "https://i.postimg.cc/9MCbWrZm/local-service-2.jpg",
+            imageUrl:'https://i.postimg.cc/nr0xHrtj/pexels-marty-shih-2147889088-31893699.jpg',
             buttonText: ["Explore Providers", "Book Now"]
         },
         {
             title: "Your city’s best service providers, এখন এক ক্লিকে হাতে।",
-            imageUrl: "https://i.postimg.cc/Bbcs9Zqx/local-service-3.jpg",
+            imageUrl: 'https://i.postimg.cc/nr0xHrtj/pexels-marty-shih-2147889088-31893699.jpg',
             buttonText: ["Search Nearby", "Get Started"]
         },
         {
             title: "Real People. Real Services. Trusted Locally. বিশ্বস্ত সার্ভিস, এখন আরও সহজ।",
-            imageUrl: "https://i.postimg.cc/YqfTmtMQ/local-service-4.jpg",
+            imageUrl: 'https://i.postimg.cc/nr0xHrtj/pexels-marty-shih-2147889088-31893699.jpg',
             buttonText: ["View Listings", "Join as Provider"]
         },
         {
             title: "Don’t stress it — plumber, tutor, tailor... সবই এখানে পাবেন।",
-            imageUrl: "https://i.postimg.cc/d0Fndb3h/local-service-5.jpg",
+            imageUrl: 'https://i.postimg.cc/nr0xHrtj/pexels-marty-shih-2147889088-31893699.jpg',
             buttonText: ["Find Help", "Post a Request"]
         }
     ];

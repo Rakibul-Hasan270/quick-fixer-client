@@ -6,8 +6,6 @@ const Navbar = () => {
     const links = <div className='md:flex items-end justify-center'>
         <li><NavLink to="/" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Home</NavLink></li>
 
-        <li><NavLink to="/services" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Services</NavLink></li>
-
         <li><NavLink to="/login" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Sign up / Login</NavLink></li>
 
     </div>
