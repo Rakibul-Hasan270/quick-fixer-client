@@ -13,10 +13,10 @@ const Navbar = () => {
         }
     }
 
-    const links = <div className='md:flex items-end justify-center'>
+    const links = <div className='md:flex justify-end items-center'>
         <li><NavLink to="/" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Home</NavLink></li>
 
-        {user ? <button onClick={handelLogOut} className="btn btn-outline ml-1.5">Log Out</button> : <li><NavLink to="/login" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Sign up / Login</NavLink></li>}
+        <li><NavLink to="/login" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Sign up / Login</NavLink></li>
 
     </div>
 
@@ -59,7 +59,7 @@ const Navbar = () => {
                             </a>
                         </li>
                         <li><a>Settings</a></li>
-                        <li><a>Logout</a></li>
+                        <li onClick={handelLogOut}><a>Logout</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,15 +1,9 @@
-import React, { useEffect, useState } from 'react';
 import Card from '../../../components/Card/Card';
 import SectionHeading from '../../../components/SectionHeading/SectionHeading';
+import useServices from '../../../hooks/useServices';
 
 const PopularServices = () => {
-    const [services, setServices] = useState([]);
-
-    useEffect(() => {
-        fetch('PopularServices.json')
-            .then(res => res.json())
-            .then(data => setServices(data))
-    }, [])
+    const [services] = useServices();
 
     return (
         <div className='mt-10'>

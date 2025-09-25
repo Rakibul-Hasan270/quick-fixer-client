@@ -5,13 +5,21 @@ import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit, } = useForm();
-    const { signInUser } = useAuth();
+    const { signInUser, googleSignInUser } = useAuth();
 
     const onSubmit = async (data) => {
         const email = data.email;
         const password = data.password;
         try {
             await signInUser(email, password);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    const handelGoogleLogin = async () => {
+        try {
+            await googleSignInUser();
         } catch (err) {
             console.log(err);
         }
@@ -74,6 +82,7 @@ const Login = () => {
 
             <div className="flex items-center mt-6 -mx-2">
                 <button
+                    onClick={handelGoogleLogin}
                     type="button"
                     className="flex items-center justify-center w-full px-6 py-2 mx-2 text-sm font-medium text-white transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:bg-blue-400 focus:outline-none"
                 >

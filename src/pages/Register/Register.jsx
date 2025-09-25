@@ -8,7 +8,7 @@ const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_ke
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const { createUser, updateUserProfile } = useAuth();
+    const { createUser, updateUserProfile, googleSignInUser } = useAuth();
     const axiosPublic = useAxiosPublic();
 
     const onSubmit = async (data) => {
@@ -32,11 +32,20 @@ const Register = () => {
         }
     }
 
+    const handelGoogleRegister = async () => {
+        try {
+            await googleSignInUser();
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
 
     return (
         <div className="max-w-2xl mx-auto w-full px-6 py-8 md:px-8 lg:w-1/2">
             <p className="mt-3 mb-12 text-xl text-center text-gray-600 dark:text-gray-200"> Welcome to <span className='text-cyan-500'>Fixer Quick</span> ! </p>
             <a
+                onClick={handelGoogleRegister}
                 href="#"
                 className="flex items-center justify-center mt-4 text-gray-600 transition-colors duration-300 transform border rounded-lg dark:border-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"
             >

@@ -1,242 +1,358 @@
 [
     {
-        "title": "ইলেকট্রিশিয়ান",
+        "title": "Electrician",
         "image": "electrician.jpg",
-        "description": "ইলেকট্রিক সংক্রান্ত সব সমস্যার জন্য দক্ষ কর্মী।",
+        "description": "Skilled workers for all kinds of electrical issues.",
         "totalProviders": 120,
         "averageRating": 4.6,
         "category": "Home Services",
         "serviceCharge": 500,
-        "name": ["বিদ্যুৎ", "মেরামত", "ইলেকট্রিক", "সার্ভিস", "ওয়ার্ক"]
+        "name": [
+            "electricity",
+            "repair",
+            "electric",
+            "service",
+            "work"
+        ]
     },
     {
-        "title": "টিউশন শিক্ষক",
+        "title": "Tuition Teacher",
         "image": "tutor.jpg",
-        "description": "স্কুল-কলেজের জন্য অভিজ্ঞ শিক্ষক।",
+        "description": "Experienced teachers for school and college.",
         "totalProviders": 200,
         "averageRating": 4.8,
         "category": "Education",
         "serviceCharge": 1000,
-        "name": ["শিক্ষক", "পাঠদান", "টিউশন", "ক্লাস", "পড়ানো", "শিক্ষা"]
+        "name": [
+            "teacher",
+            "teaching",
+            "tuition",
+            "class",
+            "education"
+        ]
     },
     {
-        "title": "দর্জি",
+        "title": "Tailor",
         "image": "tailor.jpg",
-        "description": "পোশাক সেলাই ও ডিজাইনের জন্য প্রফেশনাল দর্জি।",
+        "description": "Professional tailoring and clothing design services.",
         "totalProviders": 75,
         "averageRating": 4.4,
         "category": "Fashion",
         "serviceCharge": 800,
-        "name": ["সেলাই", "কাপড়", "ফ্যাশন", "ডিজাইন", "ফিটিং", "মোড়ানো"]
+        "name": [
+            "tailoring",
+            "clothes",
+            "fashion",
+            "design",
+            "fitting",
+            "wrapping"
+        ]
     },
     {
-        "title": "প্লাম্বার",
+        "title": "Plumber",
         "image": "plumber.jpg",
-        "description": "পানি ও গ্যাস লাইনের জন্য দক্ষ প্লাম্বার।",
+        "description": "Skilled plumbers for water and gas lines.",
         "totalProviders": 90,
         "averageRating": 4.3,
         "category": "Home Services",
         "serviceCharge": 600,
-        "name": ["প্লাম্বিং", "পানি", "লাইনের", "মেরামত", "গ্যাস"]
+        "name": [
+            "plumbing",
+            "water",
+            "lines",
+            "repair",
+            "gas"
+        ]
     },
     {
-        "title": "AC মেকানিক",
+        "title": "AC Mechanic",
         "image": "ac.jpg",
-        "description": "এসি ইনস্টল ও মেরামতের জন্য এক্সপার্ট।",
+        "description": "Experts for AC installation and repair.",
         "totalProviders": 65,
         "averageRating": 4.5,
         "category": "Electronics",
         "serviceCharge": 1000,
-        "name": ["এসি", "কুলিং", "মেরামত", "ইনস্টলেশন", "সেবা"]
+        "name": [
+            "AC",
+            "cooling",
+            "repair",
+            "installation",
+            "service"
+        ]
     },
     {
-        "title": "ওয়েব ডেভেলপার",
+        "title": "Web Developer",
         "image": "webdev.jpg",
-        "description": "ওয়েবসাইট তৈরি ও ডিজাইনিং সার্ভিস।",
+        "description": "Website creation and design services.",
         "totalProviders": 150,
         "averageRating": 4.9,
         "category": "IT Services",
         "serviceCharge": 3000,
-        "name": ["ওয়েবসাইট", "ডেভেলপমেন্ট", "কোডিং", "ডিজাইন", "সার্ভিস", "প্রোগ্রামিং"]
+        "name": [
+            "website",
+            "development",
+            "coding",
+            "design",
+            "service",
+            "programming"
+        ]
     },
     {
-        "title": "ফ্রিল্যান্স গ্রাফিক ডিজাইনার",
+        "title": "Freelance Graphic Designer",
         "image": "graphic.jpg",
-        "description": "লোগো, ব্যানার ও পোস্টার ডিজাইনের জন্য দক্ষ।",
+        "description": "Skilled in logo, banner, and poster design.",
         "totalProviders": 180,
         "averageRating": 4.7,
         "category": "Design",
         "serviceCharge": 1500,
-        "name": ["গ্রাফিক্স", "ডিজাইন", "লোগো", "ব্যানার", "পোস্টার", "ক্রিয়েটিভ"]
+        "name": [
+            "graphics",
+            "design",
+            "logo",
+            "banner",
+            "poster",
+            "creative"
+        ]
     },
     {
-        "title": "ফটোগ্রাফার",
+        "title": "Photographer",
         "image": "photographer.jpg",
-        "description": "ইভেন্ট ও প্রোডাক্ট ফটোগ্রাফির জন্য প্রফেশনাল।",
+        "description": "Professional for event and product photography.",
         "totalProviders": 45,
         "averageRating": 4.6,
         "category": "Media",
         "serviceCharge": 2500,
-        "name": ["ফটোগ্রাফি", "ছবি", "ইভেন্ট", "প্রোডাক্ট", "ক্যামেরা", "শুটিং"]
+        "name": [
+            "photography",
+            "photo",
+            "event",
+            "product",
+            "camera",
+            "shooting"
+        ]
     },
     {
-        "title": "বেবি কেয়ার টেকার",
+        "title": "Baby Care Taker",
         "image": "babysitter.jpg",
-        "description": "বিশ্বস্ত ও প্রশিক্ষিত বেবি কেয়ার সহকারী।",
+        "description": "Reliable and trained baby care assistants.",
         "totalProviders": 60,
         "averageRating": 4.4,
         "category": "Care Services",
         "serviceCharge": 1200,
-        "name": ["শিশু", "যত্ন", "বেবি কেয়ার", "সহায়তা", "বিশ্বাসযোগ্য"]
+        "name": [
+            "child",
+            "care",
+            "baby care",
+            "assistance",
+            "trustworthy"
+        ]
     },
     {
-        "title": "সেলুন সার্ভিস (বাসায়)",
+        "title": "Salon Service (at home)",
         "image": "salon.jpg",
-        "description": "হেয়ার কাট, শেভিং, ফেসিয়াল বাসায় বসেই।",
+        "description": "Haircuts, shaving, facial — all at home.",
         "totalProviders": 85,
         "averageRating": 4.5,
         "category": "Beauty",
         "serviceCharge": 700,
-        "name": ["সেলুন", "হেয়ার কাট", "ফেসিয়াল", "শেভিং", "বাসায়"]
+        "name": [
+            "salon",
+            "haircut",
+            "facial",
+            "shaving",
+            "at home"
+        ]
     },
     {
-        "title": "মেকআপ আর্টিস্ট",
+        "title": "Makeup Artist",
         "image": "makeup.jpg",
-        "description": "ইভেন্ট ও ব্রাইডাল মেকআপ স্পেশালিস্ট।",
+        "description": "Specialist in event and bridal makeup.",
         "totalProviders": 40,
         "averageRating": 4.7,
         "category": "Beauty",
         "serviceCharge": 3000,
-        "name": ["মেকআপ", "ব্রাইডাল", "ইভেন্ট", "স্পেশালিস্ট", "কসমেটিক"]
+        "name": [
+            "makeup",
+            "bridal",
+            "event",
+            "specialist",
+            "cosmetic"
+        ]
     },
     {
-        "title": "টিউবওয়েল মিস্ত্রি",
+        "title": "Tube-well Mechanic",
         "image": "tube.jpg",
-        "description": "পানির সমস্যা সমাধানে দক্ষ টিউবওয়েল মিস্ত্রি।",
+        "description": "Skilled tube-well mechanic for water issues.",
         "totalProviders": 55,
         "averageRating": 4.2,
         "category": "Home Services",
         "serviceCharge": 500,
-        "name": ["টিউবওয়েল", "মিস্ত্রি", "পানি", "মেরামত", "লাইনের"]
+        "name": [
+            "tube-well",
+            "mechanic",
+            "water",
+            "repair",
+            "lines"
+        ]
     },
     {
-        "title": "মাসাজ থেরাপিস্ট",
+        "title": "Massage Therapist",
         "image": "massage.jpg",
-        "description": "বডি পেইন ও রিলাক্সেশনের জন্য পেশাদার থেরাপিস্ট।",
+        "description": "Professional therapy for body pain and relaxation.",
         "totalProviders": 25,
         "averageRating": 4.6,
         "category": "Wellness",
         "serviceCharge": 1800,
-        "name": ["মাসাজ", "থেরাপি", "রিলাক্সেশন", "বডি পেইন", "সুস্থতা"]
+        "name": [
+            "massage",
+            "therapy",
+            "relaxation",
+            "body pain",
+            "wellness"
+        ]
     },
     {
-        "title": "গৃহশিক্ষিকা (নারী)",
+        "title": "Female Home Tutor",
         "image": "female_tutor.jpg",
-        "description": "নারী শিক্ষকের মাধ্যমে বাসায় পড়াশোনা।",
+        "description": "Female teachers for home tuition.",
         "totalProviders": 100,
         "averageRating": 4.8,
         "category": "Education",
         "serviceCharge": 1200,
-        "name": ["নারী", "শিক্ষিকা", "গৃহশিক্ষা", "পাঠদান", "টিউশন"]
+        "name": [
+            "female",
+            "teacher",
+            "home tutoring",
+            "teaching",
+            "tuition"
+        ]
     },
     {
-        "title": "কম্পিউটার রিপেয়ার",
+        "title": "Computer Repair",
         "image": "pcrepair.jpg",
-        "description": "কম্পিউটার ও ল্যাপটপ সার্ভিসিং।",
+        "description": "Servicing for computers and laptops.",
         "totalProviders": 70,
         "averageRating": 4.3,
         "category": "Electronics",
         "serviceCharge": 900,
-        "name": ["কম্পিউটার", "রিপেয়ার", "ল্যাপটপ", "সার্ভিসিং", "মেরামত"]
+        "name": [
+            "computer",
+            "repair",
+            "laptop",
+            "servicing",
+            "fix"
+        ]
     },
     {
-        "title": "মেডিকেল অ্যাটেনডেন্ট",
+        "title": "Medical Attendant",
         "image": "medical.jpg",
-        "description": "ঘরে রোগীর জন্য অভিজ্ঞ নার্স/সেবা সহকারী।",
+        "description": "Experienced nurse/care assistant for home patients.",
         "totalProviders": 30,
         "averageRating": 4.6,
         "category": "Care Services",
         "serviceCharge": 2000,
-        "name": ["নার্স", "সেবা", "রোগী", "সহকারী", "মেডিকেল"]
+        "name": [
+            "nurse",
+            "care",
+            "patient",
+            "assistant",
+            "medical"
+        ]
     },
     {
-        "title": "জামা কাচার সার্ভিস",
+        "title": "Laundry Service",
         "image": "laundry.jpg",
-        "description": "ঘরে বসে লন্ড্রি সার্ভিস বুক করুন।",
+        "description": "Book laundry services from home.",
         "totalProviders": 40,
         "averageRating": 4.4,
         "category": "Home Services",
         "serviceCharge": 300,
-        "name": ["লন্ড্রি", "কাপড়", "ধোয়া", "সার্ভিস", "জামা কাচা"]
+        "name": [
+            "laundry",
+            "clothes",
+            "washing",
+            "service",
+            "wash"
+        ]
     },
     {
-        "title": "হোম ডিপ ক্লিনিং",
+        "title": "Home Deep Cleaning",
         "image": "cleaning.jpg",
-        "description": "ঘর, বাথরুম, কিচেন প্রফেশনাল ক্লিনিং।",
+        "description": "Professional cleaning for home, bathroom, and kitchen.",
         "totalProviders": 50,
         "averageRating": 4.5,
         "category": "Cleaning",
         "serviceCharge": 1500,
-        "name": ["ক্লিনিং", "বাথরুম", "কিচেন", "ডিপ ক্লিনিং", "ঘর"]
+        "name": [
+            "cleaning",
+            "bathroom",
+            "kitchen",
+            "deep cleaning",
+            "home"
+        ]
     },
     {
-        "title": "ইভেন্ট কুক",
+        "title": "Event Cook",
         "image": "cook.jpg",
-        "description": "ইভেন্ট বা ঘরোয়া রান্নার জন্য কুক সার্ভিস।",
+        "description": "Cook service for events or home cooking.",
         "totalProviders": 35,
         "averageRating": 4.6,
         "category": "Food",
         "serviceCharge": 2500,
-        "name": ["কুক", "রান্না", "ইভেন্ট", "খাবার", "সার্ভিস"]
+        "name": [
+            "cook",
+            "cooking",
+            "event",
+            "food",
+            "service"
+        ]
     },
     {
-        "title": "গাড়ি মেকানিক",
+        "title": "Car Mechanic",
         "image": "car.jpg",
-        "description": "গাড়ির সার্ভিসিং ও মেরামতের জন্য এক্সপার্ট।",
+        "description": "Experts in car servicing and repairs.",
         "totalProviders": 45,
         "averageRating": 4.3,
         "category": "Automobile",
         "serviceCharge": 2000,
-        "name": ["গাড়ি", "মেকানিক", "সার্ভিস", "মেরামত", "রক্ষণাবেক্ষণ"]
+        "name": [
+            "car",
+            "mechanic",
+            "service",
+            "repair",
+            "maintenance"
+        ]
     },
     {
-        "title": "সিসিটিভি ইনস্টলেশন",
+        "title": "CCTV Installation",
         "image": "cctv.jpg",
-        "description": "ঘর বা দোকানে সিসিটিভি ক্যামেরা লাগানো।",
+        "description": "Install CCTV cameras at home or shop.",
         "totalProviders": 30,
         "averageRating": 4.5,
         "category": "Security",
         "serviceCharge": 1800,
-        "name": ["সিসিটিভি", "ক্যামেরা", "ইনস্টলেশন", "নিরাপত্তা", "দোকান"]
+        "name": [
+            "CCTV",
+            "camera",
+            "installation",
+            "security",
+            "shop"
+        ]
     },
     {
-        "title": "পেইন্টার",
+        "title": "Painter",
         "image": "painter.jpg",
-        "description": "ঘর বা অফিস রঙ করার জন্য দক্ষ মিস্ত্রি।",
+        "description": "Skilled painter for home or office painting.",
         "totalProviders": 60,
         "averageRating": 4.4,
         "category": "Home Services",
         "serviceCharge": 1600,
-        "name": ["রং", "পেইন্টিং", "মিস্ত্রি", "ঘর", "অফিস"]
-    },
-    {
-        "title": "মুভিং সার্ভিস",
-        "image": "moving.jpg",
-        "description": "বাসা বদলের জন্য পেশাদার ট্রান্সপোর্ট ও হেল্পার।",
-        "totalProviders": 35,
-        "averageRating": 4.5,
-        "category": "Transport",
-        "serviceCharge": 3000,
-        "name": ["মুভিং", "ট্রান্সপোর্ট", "হেল্পার", "বাসা বদল", "সার্ভিস"]
-    },
-    {
-        "title": "গার্ডেনিং সার্ভিস",
-        "image": "garden.jpg",
-        "description": "বাসা বা অফিসে গার্ডেন সাজানো ও পরিচর্যা।",
-        "totalProviders": 28,
-        "averageRating": 4.2,
-        "category": "Transport",
-        "serviceCharge": 3000,
-        "name": ["গার্ডেন", "সাজানো", "পরিচর্যা", "ফুল", "বাগান"]
+        "name": [
+            "paint",
+            "painting",
+            "mechanic",
+            "home",
+            "office"
+        ]
     }
 ]
