@@ -7,11 +7,13 @@ const CallToActiion = () => {
     return (
         <div>
             <SectionHeading heading='quick Fixer' subHeading='Quick Fixer connects you with skilled professionals instantly. Simple, fast, and reliable — everything you need, all in one place.'></SectionHeading>
+
+
             <section style={{
-                backgroundImage: `url(${bg})`,
+                // backgroundImage: `url(${bg})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
-            }} className=" bg-gray-100 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center">
+            }} className=" bg-gray-100 dark:bg-gray-800 lg:py-12 lg:flex lg:justify-center bg-radial-[at_25%_25%] from-white to-zinc-900 to-75%">
                 <div className="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full lg:shadow-md lg:rounded-xl">
                     <div className="lg:w-1/2">
                         <div
@@ -19,8 +21,7 @@ const CallToActiion = () => {
                             role="img"
                             aria-label="Person working on a laptop with coffee"
                             style={{
-                                backgroundImage:
-                                    "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')",
+                                backgroundImage: `url(${bg})`,
                                 backgroundPosition: 'center',
                                 backgroundSize: 'cover',
                             }}
@@ -30,14 +31,13 @@ const CallToActiion = () => {
 
                     <div className="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
                         <h2 className="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
-                            Build Your New <span className="text-blue-500">Idea</span>
+                            Get things done without the <span className="text-blue-500">Hassle</span>
                         </h2>
 
 
                         <p className="mt-4 text-gray-500 dark:text-gray-300">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem modi reprehenderit vitae
-                            exercitationem aliquid dolores ullam temporibus enim expedita aperiam mollitia iure
-                            consectetur dicta tenetur, porro consequuntur saepe accusantium consequatur.
+                            “Finding the right expert doesn’t have to be hard.
+                            Quick Fixer makes it quick, reliable, and stress-free.”
                         </p>
 
 

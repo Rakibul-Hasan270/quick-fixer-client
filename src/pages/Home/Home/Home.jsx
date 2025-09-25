@@ -7,10 +7,12 @@ const Home = () => {
     return (
         <div className="">
             <Carousel></Carousel>
-            <div className="max-w-6xl mx-auto space-y-16">
+            <div className="max-w-6xl mx-auto">
                 <PopularServices></PopularServices>
             </div>
+
             <CallToActiion></CallToActiion>
+
             <div className="max-w-6xl mx-auto">
                 <Testimonials></Testimonials>
             </div>
