@@ -1,22 +1,36 @@
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 
 const Register = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const { createUser, updateUserProfile } = useAuth();
+    const axiosPublic = useAxiosPublic();
 
-    const onSubmit = (data) => {
-        console.log(data);
+    const onSubmit = async (data) => {
+        const imageFile = { image: data.image[0] };
+        const res = await axiosPublic.post(image_hosting_api, imageFile, {
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        })
+        console.log(res.data);
+
+        const name = data.name;
+        const photoUrl = res.data.data.display_url;
+        const email = data.email;
+        const password = data.password;
+        try {
+            await createUser(email, password);
+            await updateUserProfile(name, photoUrl);
+        } catch (err) {
+            console.log(err)
+        }
     }
-
-    // const onSubmit = async data => {
-    //     const name = data.name;
-    //     const photoUrl = data.photo;
-    //     const email = data.email;
-    //     const password = data.password;
-    //     const userInfo = { name, email };
-
-    // }
 
 
     return (
@@ -80,7 +94,7 @@ const Register = () => {
                 </div>
                 {errors.name && <span className="text-red-500">Name is required</span>}
 
-                <div className="mt-4">
+                {/* <div className="mt-4">
                     <label
                         htmlFor="photo"
                         className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200"
@@ -94,6 +108,23 @@ const Register = () => {
                         name='photoUrl'
                         className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
                     />
+                </div> */}
+
+                <div className="mb-6 mt-6">
+                    <label htmlFor="image" className="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">
+                        Upload Image
+                    </label>
+                    <input
+                        {...register("image", { required: "Image is required" })}
+                        type="file"
+                        id="image"
+                        accept="image/*"
+                        className={`file-input file-input-bordered w-full mt-2
+              ${errors.image ? "border-red-500" : "border-gray-200 dark:border-gray-600"}`}
+                    />
+                    {errors.image && (
+                        <p className="text-red-500 text-sm mt-1">{errors.image.message}</p>
+                    )}
                 </div>
                 {errors.photoUrl && <span className="text-red-500">PhotoUrl is required</span>}
 
@@ -137,7 +168,7 @@ const Register = () => {
                 <div>{errors.password?.type === 'maxLength' && <p className="text-red-600">Password must be less then 20 characters</p>}</div>
                 <div>{errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one upperCase one lowercase, one number and one special characters</p>}</div>
 
-                <div className="mt-6 border rounded-2xl">
+                <div className="mt-6 cursor-pointer border rounded-2xl">
                     <button className="w-full px-6 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded-lg hover:bg-gray-700 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-50">
                         Sign Up
                     </button>

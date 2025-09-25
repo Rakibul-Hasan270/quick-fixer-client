@@ -1,12 +1,20 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const { register, formState: { errors }, handleSubmit, } = useForm()
+    const { register, formState: { errors }, handleSubmit, } = useForm();
+    const { signInUser } = useAuth();
 
-    const onSubmit = (data) => {
-        console.log(data)
+    const onSubmit = async (data) => {
+        const email = data.email;
+        const password = data.password;
+        try {
+            await signInUser(email, password);
+        } catch (err) {
+            console.log(err);
+        }
     }
 
     return (
@@ -35,7 +43,7 @@ const Login = () => {
                     </div>
 
                     <input
-                       {...register('password', { required: true })}
+                        {...register('password', { required: true })}
                         name='password'
                         type="password"
                         id="password"

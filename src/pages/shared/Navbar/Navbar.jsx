@@ -1,12 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 
 const Navbar = () => {
+    const { user, logOut } = useAuth();
+
+    const handelLogOut = async () => {
+        try {
+            await logOut();
+        } catch (err) {
+            console.log(err);
+        }
+    }
 
     const links = <div className='md:flex items-end justify-center'>
         <li><NavLink to="/" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Home</NavLink></li>
 
-        <li><NavLink to="/login" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Sign up / Login</NavLink></li>
+        {user ? <button onClick={handelLogOut} className="btn btn-outline ml-1.5">Log Out</button> : <li><NavLink to="/login" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Sign up / Login</NavLink></li>}
 
     </div>
 
@@ -34,10 +44,10 @@ const Navbar = () => {
                 <div className="dropdown dropdown-end bg-cyan-700 rounded-field">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
-                            {/* {
+                            {
                                 user ? <img src={user?.photoURL} alt="" /> : <img alt="Tailwind CSS Navbar component"
                                     src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-                            } */}
+                            }
                         </div>
                     </div>
                     <ul
