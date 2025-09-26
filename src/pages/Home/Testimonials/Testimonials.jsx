@@ -16,7 +16,7 @@ const Testimonials = () => {
         queryKey: ['review'],
         queryFn: async () => {
             const res = await axiosPublic.get('/review');
-            console.log(res.data);
+            // console.log(res.data);
             return res.data;
         }
     })

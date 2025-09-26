@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
+import { FaCartPlus } from "react-icons/fa6";
 
 
 const Navbar = () => {
@@ -18,8 +19,13 @@ const Navbar = () => {
 
         <li><NavLink to="/allServices" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>All Services</NavLink></li>
 
-        <li><NavLink to="/login" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Sign up / Login</NavLink></li>
+        <li><NavLink to="/" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>
+            <button className="flex items-center gap-2">
+                <FaCartPlus></FaCartPlus><div className="badge badge-sm bg-cyan-600">+0</div>
+            </button>
+        </NavLink></li>
 
+        <li><NavLink to="/login" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Sign up / Login</NavLink></li>
     </div>
 
     return (
@@ -42,7 +48,7 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <div className="navbar-end mr-4 md:w-[100px]">
+            <div title={user ? user.displayName : 'Profile'} className="navbar-end mr-4 md:w-[100px]">
                 <div className="dropdown dropdown-end bg-cyan-700 rounded-field">
                     <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                         <div className="w-10 rounded-full">
