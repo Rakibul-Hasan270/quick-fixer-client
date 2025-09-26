@@ -6,6 +6,8 @@ import Register from "../../pages/Register/Register";
 import ServiceDetails from "../../components/ServiceDetails/ServiceDetails";
 import AllServices from "../../pages/AllServices/AllServices";
 import PrivateRouter from "../PrivateRouter/PrivateRouter";
+import Dashboard from "../../layout/Dashboard/Dashboard";
+import MyCard from "../../pages/Dashboard/MyCard/MyCard";
 
 export const router = createBrowserRouter([
     {
@@ -32,6 +34,16 @@ export const router = createBrowserRouter([
             {
                 path: 'allServices',
                 element: <AllServices></AllServices>
+            }
+        ]
+    },
+    {
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>,
+        children: [
+            {
+                path: 'card',
+                element: <MyCard></MyCard>
             }
         ]
     }

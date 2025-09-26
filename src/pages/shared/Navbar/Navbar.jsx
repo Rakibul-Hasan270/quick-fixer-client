@@ -1,10 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { FaCartPlus } from "react-icons/fa6";
+import useServices from "../../../hooks/useServices";
 
 
 const Navbar = () => {
     const { user, logOut } = useAuth();
+    const [services] = useServices();
 
     const handelLogOut = async () => {
         try {
@@ -20,9 +22,9 @@ const Navbar = () => {
 
         <li><NavLink to="/allServices" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>All Services</NavLink></li>
 
-        <li><NavLink to="/" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>
+        <li><NavLink to="/dashboard/card" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>
             <button className="flex items-center gap-2">
-                <FaCartPlus></FaCartPlus><div className="badge badge-sm bg-cyan-600">+0</div>
+                <FaCartPlus></FaCartPlus><div className="badge badge-sm bg-cyan-600">+{services.length}</div>
             </button>
         </NavLink></li>
 

@@ -43,7 +43,7 @@ const AllServices = () => {
         setCurrentPage(value);
     }
 
-    if (isLoading) return <p className='text-center mt-16'>loading...</p>
+    if (isLoading) return <p className='text-center text-cyan-500 mt-16'>loading...</p>
 
     return (
         <div className='max-w-6xl mx-auto'>
