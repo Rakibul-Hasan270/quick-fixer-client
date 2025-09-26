@@ -1,26 +1,29 @@
 import React from "react";
-import { FaDollarSign, FaRegStar, FaStaffSnake } from "react-icons/fa6";
+import { FaDollarSign, FaRegStar } from "react-icons/fa6";
 import { MdSelfImprovement } from "react-icons/md";
 import { RiServiceLine } from "react-icons/ri";
 import { useLoaderData } from "react-router-dom";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
+import useMyCard from "../../hooks/useMyCard";
 
 const ServiceDetails = () => {
     const { averageRating, category, description, image, serviceCharge, title, totalProviders, _id } = useLoaderData();
     const axiosSecure = useAxiosSecure();
     const { user } = useAuth();
+    const [, , refetch] = useMyCard();
 
     const handelAddToCart = async () => {
         try {
-            const serviceInfo = { email: user.email, title, category, averageRating, description, serviceCharge, totalProviders };
+            const serviceInfo = { email: user.email, title, category, serviceCharge, image };
             const res = await axiosSecure.post(`/services`, serviceInfo);
             if (res.data.insertedId) {
                 toast.success(`${title} added your service cart`);
+                refetch();
             }
         } catch (err) {
-            console.log(err)
+            console.log(err);
         }
     }
 

@@ -7,7 +7,7 @@ const useMyCard = () => {
     const axiosSecure = useAxiosSecure();
     const { user } = useAuth();
 
-    const { data: myCard = [], isLoading } = useQuery({
+    const { data: myCard = [], isLoading, refetch } = useQuery({
         queryKey: ['my-card'],
         queryFn: async () => {
             const res = await axiosSecure.get(`/mtyCard?email=${user.email}`);
@@ -15,7 +15,7 @@ const useMyCard = () => {
         }
     })
 
-    return [myCard, isLoading];
+    return [myCard, isLoading, refetch];
 };
 
 export default useMyCard;

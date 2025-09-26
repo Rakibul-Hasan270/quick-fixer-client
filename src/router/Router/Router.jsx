@@ -43,7 +43,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: 'card',
-                element: <MyCard></MyCard>
+                element: <PrivateRouter><MyCard></MyCard></PrivateRouter>
             }
         ]
     }

@@ -1,12 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
 import { FaCartPlus } from "react-icons/fa6";
-import useServices from "../../../hooks/useServices";
+import useMyCard from "../../../hooks/useMyCard";
 
 
 const Navbar = () => {
     const { user, logOut } = useAuth();
-    const [services] = useServices();
+    const [myCard] = useMyCard();
 
     const handelLogOut = async () => {
         try {
@@ -24,7 +24,7 @@ const Navbar = () => {
 
         <li><NavLink to="/dashboard/card" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>
             <button className="flex items-center gap-2">
-                <FaCartPlus></FaCartPlus><div className="badge badge-sm bg-cyan-600">+{services.length}</div>
+                <FaCartPlus></FaCartPlus><div className="badge badge-sm bg-cyan-600">+{myCard.length}</div>
             </button>
         </NavLink></li>
 
