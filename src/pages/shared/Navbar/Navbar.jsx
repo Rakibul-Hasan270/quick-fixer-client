@@ -22,11 +22,11 @@ const Navbar = () => {
 
         <li><NavLink to="/allServices" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>All Services</NavLink></li>
 
-        <li><NavLink to="/dashboard/card" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>
+        {user && <li><NavLink to="/dashboard/card" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>
             <button className="flex items-center gap-2">
                 <FaCartPlus></FaCartPlus><div className="badge badge-sm bg-cyan-600">+{myCard.length}</div>
             </button>
-        </NavLink></li>
+        </NavLink></li>}
 
         <li><NavLink to="/login" className={({ isActive }) => isActive ? "text-cyan-400 font-bold underline" : "text-cyan-500"}>Sign up / Login</NavLink></li>
     </div>

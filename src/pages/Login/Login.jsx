@@ -2,12 +2,14 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import useAxiosPublic from '../../hooks/useAxiosPublic';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit, } = useForm();
     const { signInUser, googleSignInUser } = useAuth();
     const location = useLocation();
     const navigate = useNavigate();
+    const axiosPublic = useAxiosPublic();
 
     let from = location.state?.from?.pathname || "/";
 
@@ -24,7 +26,12 @@ const Login = () => {
 
     const handelGoogleLogin = async () => {
         try {
-            await googleSignInUser();
+            const res = await googleSignInUser();
+            const userInfo = {
+                email: res.user?.email,
+                name: res.user?.displayName
+            }
+            await axiosPublic.post('/users', userInfo);
             navigate(from, { replace: true });
         } catch (err) {
             console.log(err);

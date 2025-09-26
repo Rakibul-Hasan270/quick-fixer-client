@@ -1,15 +1,19 @@
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import toast from "react-hot-toast";
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
 
 const Register = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const { createUser, updateUserProfile, googleSignInUser } = useAuth();
     const axiosPublic = useAxiosPublic();
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     const onSubmit = async (data) => {
         const imageFile = { image: data.image[0] };
@@ -24,9 +28,16 @@ const Register = () => {
         const photoUrl = res.data.data.display_url;
         const email = data.email;
         const password = data.password;
+        const userInfo = { name, email };
         try {
             await createUser(email, password);
             await updateUserProfile(name, photoUrl);
+            const result = await axiosPublic.post('/users', userInfo);
+            if (result.data.insertedId) {
+                toast.success('Register Successfully');
+                navigate(from, { replace: true });
+                reset();
+            }
         } catch (err) {
             console.log(err)
         }
@@ -34,7 +45,12 @@ const Register = () => {
 
     const handelGoogleRegister = async () => {
         try {
-            await googleSignInUser();
+            const res = await googleSignInUser();
+            const userInfo = {
+                email: res.user?.email,
+                name: res.user?.displayName
+            }
+            await axiosPublic.post('/users', userInfo);
         } catch (err) {
             console.log(err);
         }
