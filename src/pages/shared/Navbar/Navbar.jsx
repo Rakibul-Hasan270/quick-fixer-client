@@ -9,6 +9,7 @@ const Navbar = () => {
     const handelLogOut = async () => {
         try {
             await logOut();
+            localStorage.removeItem('access-token');
         } catch (err) {
             console.log(err);
         }
