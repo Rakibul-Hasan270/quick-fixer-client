@@ -10,7 +10,7 @@ const Dashboard = () => {
                 <div className='mt-10'>
 
                     <li className="mb-1">
-                        <NavLink className={({ isActive }) => `flex items-center gap-3 p-3 rounded-lg transition-colors duration-200 ${isActive ? "bg-cyan-500 text-white shadow-md" : "text-gray-200 hover:bg-cyan-500 hover:text-white"}`} to='/dashboard/carddf'> <FaHome></FaHome>User Home
+                        <NavLink className={({ isActive }) => `flex items-center gap-3 p-3 rounded-lg transition-colors duration-200 ${isActive ? "bg-cyan-500 text-white shadow-md" : "text-gray-200 hover:bg-cyan-500 hover:text-white"}`} to='/dashboard/allusers'> <FaHome></FaHome>All User
                         </NavLink>
                     </li>
 
