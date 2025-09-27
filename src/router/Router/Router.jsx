@@ -9,6 +9,7 @@ import PrivateRouter from "../PrivateRouter/PrivateRouter";
 import Dashboard from "../../layout/Dashboard/Dashboard";
 import MyCard from "../../pages/Dashboard/MyCard/MyCard";
 import Allusers from "../../pages/Dashboard/Allusers/Allusers";
+import AddServices from "../../pages/Dashboard/AddServices/AddServices";
 
 export const router = createBrowserRouter([
     {
@@ -42,10 +43,17 @@ export const router = createBrowserRouter([
         path: 'dashboard',
         element: <Dashboard></Dashboard>,
         children: [
+            // admin only routes 
             {
                 path: 'allusers',
                 element: <Allusers></Allusers>
             },
+            {
+                path: 'addservices',
+                element: <AddServices></AddServices>
+            },
+
+            // user only routes 
             {
                 path: 'card',
                 element: <PrivateRouter><MyCard></MyCard></PrivateRouter>
